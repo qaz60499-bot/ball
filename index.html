@@ -4,7 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <meta name="theme-color" content="#06120c" />
-  <title>你的世界杯本命球星是谁？</title>
+  <meta name="description" content="10 道离谱问题，测出你的世界杯本命球星人格。测完不发？你的本命球星都急了。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="世界杯本命球星测试" />
+  <meta property="og:title" content="测完不发？你的本命球星都急了⚽" />
+  <meta property="og:description" content="10 道离谱问题，测出你的世界杯本命球星人格。梅西型、C罗型、姆巴佩型……看看谁最像你。" />
+  <meta property="og:image" content="worldcup_share_og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="测完不发？你的本命球星都急了⚽" />
+  <meta name="twitter:description" content="10 道离谱问题，测出你的世界杯本命球星人格。" />
+  <meta name="twitter:image" content="worldcup_share_og.png" />
+  <link rel="icon" type="image/png" href="worldcup_share_icon.png" />
+  <link rel="apple-touch-icon" href="worldcup_share_icon.png" />
+  <title>测完不发？你的本命球星都急了⚽</title>
   <style>
     :root{
       --bg:#06120c; --bg2:#020806; --card:rgba(9,31,21,.78); --text:#f7fff9; --muted:rgba(247,255,249,.68);
@@ -83,7 +97,7 @@
         <div class="share-box" id="shareBox">
           <div class="share-copy">
             <div class="share-eyebrow">📣 测完别憋着</div>
-            <div class="share-title" id="shareTitle">测完不发？本命球星都急了</div>
+            <div class="share-title" id="shareTitle">测完不发？你的本命球星都急了</div>
             <div class="share-subtitle" id="shareText"></div>
           </div>
           <button class="share-icon-btn" id="shareBtn" type="button" aria-label="分享测试链接">
@@ -160,11 +174,11 @@
     function fallbackSimilarity(result,match){ const map={messi:['modric','kdb'],ronaldo:['haaland','mbappe'],mbappe:['son','haaland'],neymar:['yamal','messi'],modric:['messi','kdb'],haaland:['ronaldo','mbappe'],son:['mbappe','bellingham'],yamal:['neymar','messi'],bellingham:['son','modric'],kdb:['modric','messi']}; const rel=(map[result.key]||[]).map(k=>results.find(r=>r.key===k)).filter(Boolean); return [{result,percent:match||96},{result:rel[0]||results[0],percent:74},{result:rel[1]||results[1],percent:68}]; }
     function buildSimilarity(ranking,result,match){ if(!hasActiveScore()) return fallbackSimilarity(result,match); const top=ranking[0].score; return ranking.slice(0,3).map((item,idx)=>{ const gap=Math.max(0,top-item.score); let percent=idx===0?match:Math.round(match-gap*.45-idx*4); percent=Math.max(idx===0?86:45,Math.min(idx===0?99:94,percent)); return {result:item.result,percent}; }); }
     function renderSimilarities(list){ $('similarities').innerHTML=`<div class="similarity-title"><span>你的球星人格概率</span><span>Top 3</span></div>${list.map(item=>`<div class="similarity-item"><span class="similarity-name">${item.result.emoji} ${item.result.name}</span><div class="similarity-track"><i class="similarity-fill" data-w="${item.percent}"></i></div><span class="similarity-percent">${item.percent}%</span></div>`).join('')}`; setTimeout(()=>document.querySelectorAll('.similarity-fill').forEach(el=>el.style.width=el.dataset.w+'%'),120); }
-    function showResult(saved){ const ranking=saved?.ranking||rankResults(); const result=saved?.result||ranking[0].result; const bars=saved?.bars||normalizeBars(result); const match=saved?.match||computeMatch(result,bars); const similarities=saved?.similarities||buildSimilarity(ranking,result,match); lastResult={result,bars,match,similarities,scores:{...scores},starScores:{...starScores}}; try{localStorage.setItem('worldcupStarTestLast',JSON.stringify(lastResult));}catch(e){} $('lastBtn').style.display='block'; const card=$('resultCard'); card.style.setProperty('--result-a',result.colors[0]); card.style.setProperty('--result-b',result.colors[1]); $('resultEmoji').textContent=result.emoji; $('resultName').textContent=result.name; $('resultNick').textContent=result.nick; $('matchRate').textContent=match+'%'; $('resultDesc').textContent=result.desc; $('tags').innerHTML=result.tags.map(t=>`<span class="tag">${t}</span>`).join(''); $('bars').innerHTML=bars.map(b=>`<div class="bar-row"><span>${b.name}</span><div class="bar-track"><i class="bar-fill" data-w="${b.value}"></i></div><b>${b.value}</b></div>`).join(''); renderSimilarities(similarities); $('shareTitle').textContent=`测完不发？${result.name}都急了`; $('shareText').textContent=`我测出来是【${result.name}】：${result.nick}，最高匹配 ${match}%。你敢来测吗？`; $('allResults').classList.remove('show'); $('toggleAllBtn').textContent='查看全部结果'; showScreen('result'); setTimeout(()=>document.querySelectorAll('.bar-fill').forEach(el=>el.style.width=el.dataset.w+'%'),80); confetti(); }
+    function showResult(saved){ const ranking=saved?.ranking||rankResults(); const result=saved?.result||ranking[0].result; const bars=saved?.bars||normalizeBars(result); const match=saved?.match||computeMatch(result,bars); const similarities=saved?.similarities||buildSimilarity(ranking,result,match); lastResult={result,bars,match,similarities,scores:{...scores},starScores:{...starScores}}; try{localStorage.setItem('worldcupStarTestLast',JSON.stringify(lastResult));}catch(e){} $('lastBtn').style.display='block'; const card=$('resultCard'); card.style.setProperty('--result-a',result.colors[0]); card.style.setProperty('--result-b',result.colors[1]); $('resultEmoji').textContent=result.emoji; $('resultName').textContent=result.name; $('resultNick').textContent=result.nick; $('matchRate').textContent=match+'%'; $('resultDesc').textContent=result.desc; $('tags').innerHTML=result.tags.map(t=>`<span class="tag">${t}</span>`).join(''); $('bars').innerHTML=bars.map(b=>`<div class="bar-row"><span>${b.name}</span><div class="bar-track"><i class="bar-fill" data-w="${b.value}"></i></div><b>${b.value}</b></div>`).join(''); renderSimilarities(similarities); $('shareTitle').textContent=`测完不发？${result.name}都等你认领`; document.title = `测完不发？你的本命球星都急了⚽`;  $('shareText').textContent=`我测出来是【${result.name}】：${result.nick}，最高匹配 ${match}%。你敢来测吗？`; $('allResults').classList.remove('show'); $('toggleAllBtn').textContent='查看全部结果'; showScreen('result'); setTimeout(()=>document.querySelectorAll('.bar-fill').forEach(el=>el.style.width=el.dataset.w+'%'),80); confetti(); }
     function renderAllResults(){ $('allResults').innerHTML=results.map(r=>`<div class="mini-result"><b>${r.emoji} ${r.name}</b><p>${r.nick}</p></div>`).join(''); }
     function getShareUrl(result){ try{ const url=new URL(window.location.href); url.searchParams.set('r',result.key); return url.toString(); }catch(e){ return window.location.href; } }
     function copyText(text,msg){ if(navigator.clipboard&&window.isSecureContext) return navigator.clipboard.writeText(text).then(()=>toast(msg)); const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); toast(msg); return Promise.resolve(); }
-    function shareLink(){ const result=lastResult?.result; if(!result){toast('先完成测试');return;} const url=getShareUrl(result); const text=$('shareText').textContent; const title=$('shareTitle')?.textContent || '测完不发？本命球星都急了'; if(navigator.share) navigator.share({title,text,url}).catch(()=>{}); else copyText(`${title}\n${text}\n${url}`,'分享链接已复制'); }
+    function shareLink(){ const result=lastResult?.result; if(!result){toast('先完成测试');return;} const url=getShareUrl(result); const text=$('shareText').textContent; const title=$('shareTitle')?.textContent || '测完不发？你的本命球星都急了'; if(navigator.share) navigator.share({title,text,url}).catch(()=>{}); else copyText(`${title}\n${text}\n${url}`,'分享链接已复制'); }
     function toast(msg){ const t=$('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(t.timer); t.timer=setTimeout(()=>t.classList.remove('show'),1500); }
     function confetti(){ if(matchMedia('(prefers-reduced-motion: reduce)').matches) return; const colors=['#ffd166','#43ff99','#51e8ff','#ff5d9e','#fff7c8']; for(let i=0;i<28;i++){ const el=document.createElement('i'); el.className='confetti'; el.style.left=Math.random()*100+'%'; el.style.background=colors[i%colors.length]; el.style.setProperty('--dur',780+Math.random()*900+'ms'); el.style.setProperty('--drift',-60+Math.random()*120+'px'); document.body.appendChild(el); setTimeout(()=>el.remove(),1800); } }
 
