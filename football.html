@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#06120c" />
+  <meta name="description" content="10 道离谱问题，测出你的世界杯本命球星人格。测完不发？你的本命球星都急了。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="世界杯本命球星测试" />
+  <meta property="og:title" content="测完不发？你的本命球星都急了⚽" />
+  <meta property="og:description" content="10 道离谱问题，测出你的世界杯本命球星人格。梅西型、C罗型、姆巴佩型……看看谁最像你。" />
+  <meta property="og:image" content="worldcup_share_og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="测完不发？你的本命球星都急了⚽" />
+  <meta name="twitter:description" content="10 道离谱问题，测出你的世界杯本命球星人格。" />
+  <meta name="twitter:image" content="worldcup_share_og.png" />
+  <link rel="icon" type="image/png" href="worldcup_share_icon.png" />
+  <link rel="apple-touch-icon" href="worldcup_share_icon.png" />
+  <title>测完不发？你的本命球星都急了⚽</title>
+  <style>
+    :root{
+      --bg:#06120c; --bg2:#020806; --card:rgba(9,31,21,.78); --text:#f7fff9; --muted:rgba(247,255,249,.68);
+      --line:rgba(255,255,255,.12); --gold:#ffd166; --gold2:#ffad32; --green:#43ff99; --cyan:#51e8ff; --pink:#ff5d9e;
+      --shadow:0 24px 70px rgba(0,0,0,.46); --radius:28px; --tap:56px;
+    }
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html,body{margin:0;min-height:100%;background:var(--bg2);color:var(--text);font-family:ui-rounded,"PingFang SC","Microsoft YaHei",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+    body{background:
+      radial-gradient(circle at 50% -12%,rgba(255,209,102,.32),transparent 28%),
+      radial-gradient(circle at 8% 18%,rgba(81,232,255,.16),transparent 26%),
+      radial-gradient(circle at 92% 12%,rgba(67,255,153,.14),transparent 28%),
+      linear-gradient(180deg,#071a10 0%,#06120c 58%,#020706 100%)}
+    button{font:inherit;touch-action:manipulation;cursor:pointer}.btn,.opt{position:relative;z-index:10;pointer-events:auto;-webkit-user-select:none;user-select:none}.btn:focus-visible,.opt:focus-visible{outline:3px solid rgba(81,232,255,.75);outline-offset:3px}
+    .bg{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.bg:before{content:"";position:absolute;inset:-20%;background:radial-gradient(ellipse at 50% 85%,rgba(67,255,153,.18),transparent 44%),conic-gradient(from 212deg at 12% 0%,transparent 0 18deg,rgba(255,255,255,.16) 18deg 25deg,transparent 25deg 80deg),conic-gradient(from 140deg at 88% 0%,transparent 0 18deg,rgba(255,255,255,.14) 18deg 25deg,transparent 25deg 80deg);animation:light 7s ease-in-out infinite alternate}.bg:after{content:"";position:absolute;left:50%;bottom:-220px;width:min(950px,185vw);height:470px;transform:translateX(-50%) perspective(500px) rotateX(58deg);border-radius:50%;border:1px solid rgba(255,255,255,.12);background:radial-gradient(ellipse at center,rgba(67,255,153,.16),transparent 72%),repeating-linear-gradient(90deg,rgba(255,255,255,.032) 0 28px,rgba(0,0,0,.04) 28px 56px)}
+    @keyframes light{from{opacity:.55;filter:blur(.2px)}to{opacity:.95;filter:blur(1.5px)}}
+    .app{position:relative;z-index:2;width:100%;max-width:520px;min-height:100svh;margin:0 auto;padding:calc(18px + env(safe-area-inset-top)) 16px calc(24px + env(safe-area-inset-bottom))}.screen{display:none;min-height:calc(100svh - 42px);animation:pageIn .28s ease both}.screen.active{display:flex;flex-direction:column;justify-content:center}.result-wrap.active{justify-content:flex-start;padding-top:8px}@keyframes pageIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    .glass{position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.04)),var(--card);box-shadow:var(--shadow);backdrop-filter:blur(20px) saturate(1.15);border-radius:var(--radius)}.glass:after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16),transparent 22%,transparent 74%,rgba(255,255,255,.07));pointer-events:none;opacity:.54}
+    .hero{text-align:center;padding:10px 0 16px}.kicker{display:inline-flex;align-items:center;gap:8px;min-height:34px;padding:8px 12px;border:1px solid rgba(255,209,102,.38);border-radius:999px;background:rgba(255,209,102,.08);color:#ffe5a2;font-size:13px;font-weight:900}.title{margin:18px 0 10px;font-size:clamp(38px,10vw,54px);line-height:.98;letter-spacing:-1.6px;font-weight:1000;text-shadow:0 16px 36px rgba(0,0,0,.42)}.title small{display:block;font-size:.46em;letter-spacing:.08em;color:rgba(247,255,249,.7);margin-bottom:9px;text-transform:uppercase}.title span{display:block;background:linear-gradient(180deg,#fff 0%,#fff0b8 34%,#ffd166 60%,#ff9d21 100%);-webkit-background-clip:text;color:transparent}.subtitle{margin:0 auto;color:var(--muted);font-size:16px;line-height:1.72;max-width:380px;text-wrap:balance}
+    .start-panel{margin-top:14px;padding:16px}.start-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}.start-list li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;min-height:54px;padding:12px;border-radius:20px;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.08);color:rgba(247,255,249,.78);line-height:1.48;font-size:14px}.start-list b{color:#ffe39c;font-size:13px;white-space:nowrap}
+    .btn{width:100%;min-height:var(--tap);border:0;border-radius:22px;padding:16px 18px;color:#142012;background:linear-gradient(180deg,#fff8c7 0%,#ffd166 48%,#ff9d21 100%);box-shadow:0 14px 34px rgba(255,173,50,.26),inset 0 1px 0 rgba(255,255,255,.75);font-size:17px;font-weight:1000;transition:transform .14s ease,filter .14s ease}.btn:active{transform:scale(.975);filter:brightness(.96)}.btn.secondary{background:rgba(255,255,255,.1);color:var(--text);border:1px solid rgba(255,255,255,.14);box-shadow:none}.btn.ghost{background:transparent;color:#ffe39c;border:1px solid rgba(255,209,102,.34);box-shadow:none}.start-btn{margin-top:14px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:13px;color:var(--muted);font-size:13px;font-weight:950}.topbar span{display:inline-flex;align-items:center;min-height:32px;padding:6px 10px;border:1px solid rgba(255,255,255,.09);background:rgba(0,0,0,.18);border-radius:999px}.progress{height:12px;margin-bottom:15px;border:1px solid rgba(255,255,255,.09);border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;box-shadow:inset 0 2px 8px rgba(0,0,0,.28)}.progress i{display:block;height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,var(--green),var(--cyan),var(--gold));transition:width .32s ease}
+    .question-card{padding:18px}.q-meta{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.q-num{display:inline-flex;align-items:center;gap:7px;min-height:31px;padding:7px 10px;border-radius:999px;background:linear-gradient(180deg,#ffe9a7,#ffc54f);color:#211608;font-size:12px;font-weight:1000}.q-num:before{content:"⚽"}.q-type{color:rgba(247,255,249,.62);font-size:12px;font-weight:900}.q-title{position:relative;z-index:2;margin:0 0 16px;font-size:clamp(22px,6vw,28px);line-height:1.34;letter-spacing:-.45px;font-weight:1000;text-wrap:balance}.options{position:relative;z-index:2;display:grid;gap:11px}.opt{min-height:64px;display:grid;grid-template-columns:34px 1fr;gap:11px;align-items:center;width:100%;padding:13px;border:1px solid rgba(255,255,255,.12);border-radius:21px;background:rgba(1,9,6,.34);color:var(--text);text-align:left;font-size:15px;line-height:1.45;font-weight:850;transition:transform .14s ease,border-color .14s ease,background .14s ease}.opt:active{transform:scale(.985)}.opt.selected{border-color:rgba(255,209,102,.72);background:rgba(255,209,102,.14);box-shadow:0 0 0 3px rgba(255,209,102,.09)}.letter{width:34px;height:34px;display:grid;place-items:center;border-radius:13px;background:rgba(255,209,102,.15);border:1px solid rgba(255,209,102,.28);color:#ffe39c;font-weight:1000}.opt.selected .letter{background:linear-gradient(180deg,#fff8c7,#ffd166);color:#1c1608}
+    .result-card{padding:16px}.collector{position:relative;z-index:2;min-height:260px;border-radius:30px;padding:18px 16px;overflow:hidden;text-align:center;background:radial-gradient(circle at 50% 18%,var(--result-a,rgba(255,209,102,.22)),transparent 30%),linear-gradient(160deg,rgba(9,32,22,.98),rgba(5,17,12,.92));border:1px solid rgba(255,255,255,.14);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 20px 48px rgba(0,0,0,.34)}.avatar{width:118px;height:118px;margin:8px auto 14px;display:grid;place-items:center;border-radius:50%;font-size:52px;background:radial-gradient(circle at 34% 25%,#fff6bd,#ffd166 44%,#9d5a14 100%);box-shadow:0 0 0 9px rgba(255,209,102,.08),0 24px 52px rgba(0,0,0,.38),0 0 60px var(--result-a,rgba(255,209,102,.24))}.result-label{color:#ffe39c;font-size:12px;font-weight:1000;letter-spacing:.14em;text-transform:uppercase}.star-name{margin:7px 0 7px;font-size:clamp(31px,8vw,42px);line-height:1.05;font-weight:1000;letter-spacing:-1.2px}.nickname{margin:0 auto;color:#fff0bd;font-size:18px;line-height:1.35;font-weight:1000;max-width:360px;text-wrap:balance}.match{display:inline-flex;align-items:center;gap:8px;margin-top:13px;min-height:38px;padding:8px 13px;border-radius:999px;background:rgba(67,255,153,.12);border:1px solid rgba(67,255,153,.26);color:#baffd6;font-size:14px;font-weight:1000}
+    .desc{position:relative;z-index:2;margin:14px 0 12px;padding:14px;border-radius:22px;background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.08);color:rgba(247,255,249,.82);font-size:15px;line-height:1.75;text-align:left}.tags{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.tag{display:inline-flex;align-items:center;min-height:30px;padding:7px 10px;border-radius:999px;background:linear-gradient(180deg,#eafff1,#70ffad);color:#102112;font-size:12px;font-weight:1000}.bars,.similarity-list{position:relative;z-index:2;display:grid;gap:10px;margin:14px 0}.bar-row{display:grid;grid-template-columns:76px 1fr 38px;gap:10px;align-items:center;color:rgba(247,255,249,.82);font-size:13px;font-weight:950}.bar-track,.similarity-track{height:12px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.07);overflow:hidden}.bar-fill,.similarity-fill{display:block;width:0%;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--cyan),var(--green),var(--gold));transition:width .75s cubic-bezier(.2,.9,.2,1)}
+    .similarity-title{display:flex;align-items:center;justify-content:space-between;color:#ffe39c;font-size:13px;font-weight:1000}.similarity-item{display:grid;grid-template-columns:82px 1fr 42px;gap:10px;align-items:center;padding:11px 12px;border-radius:18px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.09)}.similarity-name{font-size:13px;font-weight:1000;color:rgba(247,255,249,.9);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.similarity-percent{font-size:13px;font-weight:1000;color:#fff1c1;text-align:right}.share-box{position:relative;z-index:12;margin:15px 0 0;display:grid;grid-template-columns:1fr 74px;gap:14px;align-items:center;min-height:126px;padding:18px;border-radius:25px;background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.045)),rgba(2,8,6,.72);border:1px solid rgba(255,255,255,.13);box-shadow:0 18px 46px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.10);overflow:hidden}.share-box:before{content:"";position:absolute;right:-16px;top:34px;border-width:18px 0 18px 22px;border-style:solid;border-color:transparent transparent transparent rgba(255,255,255,.10);filter:drop-shadow(0 8px 18px rgba(0,0,0,.22))}.share-copy{position:relative;z-index:2;min-width:0}.share-eyebrow{display:inline-flex;align-items:center;gap:6px;margin-bottom:7px;padding:5px 9px;border-radius:999px;background:rgba(255,209,102,.11);border:1px solid rgba(255,209,102,.24);color:#ffe39c;font-size:12px;font-weight:1000}.share-title{margin:0;color:rgba(247,255,249,.95);font-size:clamp(20px,5.5vw,27px);line-height:1.18;font-weight:1000;letter-spacing:-.5px;text-wrap:balance}.share-subtitle{margin-top:8px;color:rgba(247,255,249,.58);font-size:12px;line-height:1.45;font-weight:850;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.share-icon-btn{position:relative;z-index:20;width:74px;height:74px;border:0;border-radius:18px;background:linear-gradient(180deg,#fff,#e9e9e9);box-shadow:0 14px 30px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.9);display:grid;place-items:center;color:#222;transition:transform .14s ease,filter .14s ease}.share-icon-btn:active{transform:scale(.94);filter:brightness(.94)}.share-icon-btn svg{width:39px;height:39px;stroke:currentColor;stroke-width:2.9;stroke-linecap:round;stroke-linejoin:round;fill:none}.actions{position:relative;z-index:2;display:grid;gap:10px;margin-top:14px}.all-results{position:relative;z-index:2;display:none;grid-template-columns:1fr;gap:9px;margin-top:12px}.all-results.show{display:grid}.mini-result{padding:12px;border-radius:19px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.09)}.mini-result b{display:flex;align-items:center;gap:7px;color:#ffe39c;margin-bottom:5px;font-size:14px}.mini-result p{margin:0;color:rgba(247,255,249,.67);font-size:13px;line-height:1.48}.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));z-index:50;transform:translateX(-50%) translateY(18px);opacity:0;min-width:150px;text-align:center;padding:11px 14px;border-radius:999px;background:rgba(0,0,0,.78);border:1px solid rgba(255,255,255,.16);color:#fff;font-size:14px;font-weight:950;box-shadow:0 14px 38px rgba(0,0,0,.32);pointer-events:none;transition:.22s ease}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.footer-note{margin:15px auto 0;max-width:360px;text-align:center;color:rgba(247,255,249,.46);font-size:12px;line-height:1.65}.confetti{position:fixed;top:-14px;width:7px;height:12px;border-radius:2px;background:var(--gold);z-index:35;pointer-events:none;animation:fall var(--dur,900ms) linear forwards}@keyframes fall{to{transform:translateX(var(--drift,0px)) translateY(105svh) rotate(600deg);opacity:.15}}
+    @media(max-width:380px){.app{padding-left:12px;padding-right:12px}.q-title{font-size:21px}.opt{font-size:14px;min-height:60px}.bar-row{grid-template-columns:68px 1fr 34px}.similarity-item{grid-template-columns:76px 1fr 38px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <main class="app">
+    <section class="screen active" id="startScreen" aria-labelledby="homeTitle">
+      <div class="hero">
+        <div class="kicker">🏆 世界杯抽象测试局</div>
+        <h1 class="title" id="homeTitle"><small>World Cup Persona Test</small>你的世界杯<br><span>本命球星是谁？</span></h1>
+        <p class="subtitle">10 个离谱问题，测出你灵魂里的球场怪物。不懂球也能测，越抽象越准。</p>
+      </div>
+      <div class="start-panel glass">
+        <ul class="start-list">
+          <li><b>玩法</b><span>每题选一个最像你的离谱反应，系统会匹配更像的球星人格。</span></li>
+          <li><b>结果</b><span>生成本命球星、匹配度、前三相似球星概率和分享链接。</span></li>
+          <li><b>平衡</b><span>性格匹配为主，轻微结果校准，避免某个球星过多或过少。</span></li>
+        </ul>
+        <button class="btn start-btn" id="startBtn" type="button">开始测试</button>
+        <button class="btn secondary start-btn" id="lastBtn" type="button" style="display:none;margin-top:10px">查看上次结果</button>
+      </div>
+      <p class="footer-note">建议手机浏览器打开。非官方娱乐测试，不使用真实照片和官方标志。</p>
+    </section>
+
+    <section class="screen" id="quizScreen" aria-live="polite">
+      <div class="topbar"><span id="stepText">第 1 / 10 题</span><span id="moodText">草皮正在发光</span></div>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="progressBar"></i></div>
+      <div class="question-card glass">
+        <div class="q-meta"><div class="q-num" id="qNum">QUESTION 01</div><div class="q-type">凭第一反应</div></div>
+        <h2 class="q-title" id="questionText"></h2>
+        <div class="options" id="options"></div>
+      </div>
+      <p class="footer-note">犹豫超过 3 秒，足球会开始怀疑你。</p>
+    </section>
+
+    <section class="screen result-wrap" id="resultScreen" aria-labelledby="resultName">
+      <div class="result-card glass" id="resultCard">
+        <div class="collector">
+          <div class="avatar" id="resultEmoji">⚡</div>
+          <div class="result-label">你的世界杯本命球星人格</div>
+          <h2 class="star-name" id="resultName">姆巴佩型</h2>
+          <div class="nickname" id="resultNick">一眨眼就没了的高速物种</div>
+          <div class="match">最高匹配 <span id="matchRate">97%</span></div>
+        </div>
+        <div class="desc" id="resultDesc"></div>
+        <div class="tags" id="tags"></div>
+        <div class="bars" id="bars"></div>
+        <div class="similarity-list" id="similarities"></div>
+        <div class="share-box" id="shareBox">
+          <div class="share-copy">
+            <div class="share-eyebrow">📣 测完别憋着</div>
+            <div class="share-title" id="shareTitle">测完不发？你的本命球星都急了</div>
+            <div class="share-subtitle" id="shareText"></div>
+          </div>
+          <button class="share-icon-btn" id="shareBtn" type="button" aria-label="分享测试链接">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v12"></path>
+              <path d="M7.5 7.5 12 3l4.5 4.5"></path>
+              <path d="M5 12.5v5.2c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-5.2"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="actions">
+          <button class="btn secondary" id="restartBtn" type="button">再测一次</button>
+          <button class="btn ghost" id="toggleAllBtn" type="button">查看全部结果</button>
+        </div>
+        <div class="all-results" id="allResults"></div>
+      </div>
+      <p class="footer-note">概率是人格相似度，不是随机抽卡。</p>
+    </section>
+  </main>
+  <div class="toast" id="toast">已处理</div>
+
+  <script>
+    const ATTRS = ['calm','win','speed','chaos','control','finish','show','team','talent','fun'];
+    const attrNames = {calm:'冷静度',win:'胜负欲',speed:'速度感',chaos:'抽象感',control:'控场脑',finish:'终结力',show:'镜头感',team:'团队魂',talent:'天赋值',fun:'整活感'};
+    const STAR_DIRECT_WEIGHT = 14;
+    const TARGET_RATES = {messi:13,ronaldo:12,mbappe:11,neymar:11,modric:9,haaland:9,son:9,yamal:9,bellingham:8,kdb:9};
+    const BALANCE_BIAS = {messi:6,ronaldo:5,mbappe:2,neymar:0,modric:-1,haaland:-1,son:-1,yamal:-1,bellingham:-3,kdb:-1};
+
+    const results = [
+      {key:'messi',name:'梅西型',emoji:'🪄',nick:'沉默开挂的宇宙小老头',weights:{calm:3,control:3,talent:3,team:1,finish:1},colors:['rgba(255,209,102,.30)','rgba(81,232,255,.18)'],desc:'你平时看起来像在省电，但脑子里可能装着一整套宇宙级操作系统。别人还在寻找传球路线，你已经把三秒后的剧情写完了。',tags:['低调开挂','小范围封神','细节怪物','世界给你让路']},
+      {key:'ronaldo',name:'C罗型',emoji:'🔥',nick:'自律到足球都害怕的人',weights:{win:3,finish:3,show:2,speed:1,calm:1},colors:['rgba(255,102,122,.34)','rgba(255,209,102,.18)'],desc:'你不是来参加比赛的，你是来提醒世界：努力还可以更过分一点。别人热身是活动身体，你热身像在启动人类战斗机器。',tags:['胜负欲爆炸','训练狂魔','镜头感强','不赢睡不着']},
+      {key:'mbappe',name:'姆巴佩型',emoji:'⚡',nick:'一眨眼就没了的高速物种',weights:{speed:3,finish:2,win:2,show:1,fun:1},colors:['rgba(81,232,255,.32)','rgba(255,209,102,.20)'],desc:'你的特点是快。别人还在加载地图，你已经冲到禁区开始结算奖励。你不喜欢绕弯，更相信直接把问题冲穿。',tags:['速度离谱','年轻但狠','反击加速器','直接解决问题']},
+      {key:'neymar',name:'内马尔型',emoji:'🎭',nick:'足球场上的抽象艺术家',weights:{talent:3,chaos:3,show:2,fun:2,speed:1},colors:['rgba(255,93,158,.34)','rgba(67,255,153,.18)'],desc:'你不是单纯踢球，你是在给草皮创作行为艺术。别人过人是技术动作，你过人像临时写了一首诗，还顺手带点节目效果。',tags:['花活很多','情绪浓度高','灵感型玩家','天才兼整活']},
+      {key:'modric',name:'莫德里奇型',emoji:'🧠',nick:'中场小老头遥控器',weights:{control:3,calm:3,team:2,talent:1,win:1},colors:['rgba(255,209,102,.28)','rgba(183,151,255,.18)'],desc:'你不一定声音最大，但你像球场后台管理员。哪里乱了，你过去点一下，世界又恢复正常。你的强大不是吵，是稳。',tags:['冷静控场','越老越妖','脑子清楚','不抢戏但关键']},
+      {key:'haaland',name:'哈兰德型',emoji:'🦾',nick:'禁区里的北欧拆迁队',weights:{finish:3,win:2,speed:1,calm:1,chaos:1},colors:['rgba(67,255,153,.28)','rgba(255,209,102,.18)'],desc:'你的风格简单直接：球来了，门没了，对面后卫开始反思职业选择。你可能不爱废话，但你很会让比分说话。',tags:['终结机器','少说多进','压迫感强','足球选中的怪物']},
+      {key:'son',name:'孙兴慜型',emoji:'🌞',nick:'笑着冲刺的亚洲闪电',weights:{speed:3,team:2,win:1,finish:1,fun:1},colors:['rgba(255,209,102,.34)','rgba(67,255,153,.20)'],desc:'你给人的感觉很好相处，但一启动就不太讲道理。平时阳光，关键时刻突然变成反击恶魔，笑着把对手打穿。',tags:['亲和力强','速度爆发','努力型主角','笑着打穿']},
+      {key:'yamal',name:'亚马尔型',emoji:'🌟',nick:'还没成年但已经开始改规则',weights:{talent:3,fun:2,chaos:2,speed:1,show:1},colors:['rgba(81,232,255,.30)','rgba(255,93,158,.20)'],desc:'你像一个系统还没完全识别的新版本。别人以为你只是来体验比赛，结果你已经开始在世界杯里乱写剧情。',tags:['天赋溢出','新鲜感强','不按常理','年轻得吓人']},
+      {key:'bellingham',name:'贝林厄姆型',emoji:'👑',nick:'少年老成的全场管理员',weights:{team:2,win:2,control:2,finish:1,show:1},colors:['rgba(255,209,102,.32)','rgba(255,102,122,.18)'],desc:'你身上有一种“年龄不大但已经像队长”的气质。能冲、能控、能扛事，还偶尔会突然来一下大场面。',tags:['全能感','少年领袖','能扛事','大场面体质']},
+      {key:'kdb',name:'德布劳内型',emoji:'📡',nick:'人形 GPS 传球导航',weights:{control:3,team:2,talent:2,calm:1,finish:1},colors:['rgba(81,232,255,.31)','rgba(67,255,153,.17)'],desc:'你看起来是在传球，其实是在给队友发送人生路线规划。你的快乐不是自己冲，而是让别人突然发现：球怎么刚好到这里了？',tags:['视野开挂','理性战术','传球导航','后台导演']}
+    ];
+
+    function pick(text, attrs, primary, secondary){ return [text, {attrs, stars:{[primary]:5, [secondary]:2}}]; }
+    const questions = [
+      {text:'世界杯决赛前夜，你突然变成更衣室里的一根香蕉，你会？',options:[pick('安静躺着，等待真正的强者补充能量。',{calm:2,team:1,control:1},'messi','modric'),pick('滚到队长脚边，暗中制造战术灵感。',{control:2,team:2,talent:1},'kdb','bellingham'),pick('溜进球鞋里，成为秘密加速插件。',{speed:2,chaos:1,fun:1},'mbappe','yamal'),pick('被镜头拍到后开始营业，成为全球热梗。',{show:2,fun:2,chaos:1},'neymar','yamal')]},
+      {text:'如果足球突然开口骂人，你觉得它第一句会说什么？',options:[pick('“别踢我，我也有梦想。”',{team:2,calm:1,fun:1},'son','messi'),pick('“刚才那脚谁踢的？有点东西。”',{finish:2,win:1,talent:1},'haaland','ronaldo'),pick('“你们人类能不能先练练停球？”',{control:2,calm:1,win:1},'modric','kdb'),pick('“我宣布，我才是世界杯真正主角。”',{show:2,win:2,fun:1},'ronaldo','neymar')]},
+      {text:'你突然会瞬移，但只能瞬移到奇怪的地方，你选哪里？',options:[pick('对方禁区里，假装自己一直都在。',{finish:2,speed:2,win:1},'mbappe','haaland'),pick('裁判身后，偷看世界运行规则。',{control:2,calm:2,talent:1},'messi','modric'),pick('替补席饮水机旁，先给灵魂补水。',{team:2,calm:1,fun:2},'son','bellingham'),pick('看台最上面，大喊一句“我懂球！”',{show:2,chaos:2,fun:1},'yamal','neymar')]},
+      {text:'你射门时天空掉下来一个巨大鸡腿，你会？',options:[pick('先射门，进了再吃。',{finish:2,win:2,calm:1},'haaland','ronaldo'),pick('停球、看鸡腿、思考人生。',{calm:2,control:1,chaos:1},'modric','messi'),pick('把鸡腿当队友传过去。',{team:2,talent:1,fun:1},'kdb','son'),pick('直接庆祝，因为这是命运的助攻。',{show:2,fun:2,chaos:1},'neymar','yamal')]},
+      {text:'你进球后的庆祝动作最可能是？',options:[pick('原地冷脸，好像只是完成日常任务。',{calm:2,finish:2,control:1},'messi','haaland'),pick('狂奔半个球场，差点跑出地球。',{speed:2,win:1,show:1},'mbappe','son'),pick('摆一个没人看懂但很有艺术感的动作。',{talent:2,chaos:2,show:1},'neymar','yamal'),pick('抱住队友，顺便把他勒到怀疑人生。',{team:2,fun:1,win:1},'bellingham','son')]},
+      {text:'世界杯奖杯看到你第一眼，会说什么？',options:[pick('“你看起来像个能扛事的人。”',{team:2,calm:1,win:1},'bellingham','son'),pick('“你别过来，我怕你太想赢。”',{win:2,finish:1,show:1},'ronaldo','haaland'),pick('“你脑子里好像有很多奇怪路线。”',{control:2,talent:2,chaos:1},'kdb','messi'),pick('“你是不是来搞节目效果的？”',{fun:2,show:2,chaos:1},'yamal','neymar')]},
+      {text:'点球大战轮到你，你脑子里正在想什么？',options:[pick('角度、力度、呼吸，一切都在掌控。',{calm:2,control:2,finish:1},'messi','modric'),pick('管他呢，先爆射再说。',{win:2,finish:2,speed:1},'ronaldo','haaland'),pick('我要踢一个门将一辈子忘不了的。',{talent:2,show:1,chaos:1},'neymar','yamal'),pick('要是踢飞了，我能不能假装草皮滑了？',{fun:2,chaos:2,calm:1},'yamal','son')]},
+      {text:'你是世界杯替补，但教练一直不让你上，你会？',options:[pick('认真观察，等一个改变比赛的机会。',{calm:2,control:2,team:1},'modric','bellingham'),pick('在场边热身热到像要发射。',{speed:2,win:2,finish:1},'mbappe','ronaldo'),pick('给主力递水，但顺便讲三套战术。',{team:2,control:2,fun:1},'kdb','modric'),pick('对镜头微笑，先把人气拿下。',{show:2,fun:2,team:1},'son','neymar')]},
+      {text:'如果你的队友突然变成一群企鹅，你会怎么踢？',options:[pick('重新组织阵型，企鹅也要有纪律。',{control:2,team:2,calm:1},'modric','bellingham'),pick('让企鹅冲起来，主打混乱压迫。',{speed:2,win:1,chaos:2},'ronaldo','mbappe'),pick('利用企鹅滑行，开发全新战术。',{talent:2,control:1,fun:1},'yamal','kdb'),pick('企鹅也能当核心，我负责当队长。',{team:2,win:2,control:1},'bellingham','modric')]},
+      {text:'比赛最后一分钟，你获得一次神秘技能，你选？',options:[pick('时间变慢 3 秒。',{calm:2,control:2,talent:1},'messi','modric'),pick('射门力量提升 300%。',{finish:2,win:2,speed:1},'haaland','ronaldo'),pick('全场镜头自动对准我。',{show:2,win:2,finish:1},'ronaldo','neymar'),pick('球门突然变成纸板箱。',{finish:2,chaos:1,fun:1},'haaland','yamal')]}
+    ];
+
+    const STAR_KEYS = results.map(r=>r.key);
+    const moodTexts = ['草皮正在发光','足球开始说胡话','替补席有点紧张','裁判正在加载规则','奖杯偷偷看了你一眼'];
+    let current = 0, locked = false, scores = {}, starScores = {}, lastResult = null;
+    const $ = id => document.getElementById(id);
+    const screens = {start:$('startScreen'),quiz:$('quizScreen'),result:$('resultScreen')};
+
+    function bindTap(el, handler){ if(!el) return; let last=0; const run=e=>{const now=Date.now(); if(now-last<300) return; last=now; if(e && e.type!=='click' && e.cancelable) e.preventDefault(); handler(e);}; if(window.PointerEvent) el.addEventListener('pointerup',run,{passive:false}); else el.addEventListener('touchend',run,{passive:false}); el.addEventListener('click',run,false); }
+    function showScreen(name){ Object.values(screens).forEach(s=>s.classList.remove('active')); screens[name].classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }
+    function resetScores(){ scores={}; starScores={}; ATTRS.forEach(k=>scores[k]=0); STAR_KEYS.forEach(k=>starScores[k]=0); }
+    function startQuiz(){ current=0; locked=false; resetScores(); showScreen('quiz'); renderQuestion(); }
+    function renderQuestion(){ locked=false; const q=questions[current]; const progress=Math.round(((current+1)/questions.length)*100); $('stepText').textContent=`第 ${current+1} / ${questions.length} 题`; $('moodText').textContent=moodTexts[current%moodTexts.length]; $('progressBar').style.width=`${progress}%`; document.querySelector('.progress').setAttribute('aria-valuenow',progress); $('qNum').textContent=`QUESTION ${String(current+1).padStart(2,'0')}`; $('questionText').textContent=q.text; const box=$('options'); box.innerHTML=''; q.options.forEach((op,i)=>{ const b=document.createElement('button'); b.className='opt'; b.type='button'; b.innerHTML=`<span class="letter">${String.fromCharCode(65+i)}</span><span>${op[0]}</span>`; bindTap(b,()=>choose(op[1],b)); box.appendChild(b); }); }
+    function choose(payload, btn){ if(locked) return; locked=true; document.querySelectorAll('.opt').forEach(el=>el.disabled=true); btn.classList.add('selected'); Object.entries(payload.attrs).forEach(([k,v])=>scores[k]=(scores[k]||0)+v); Object.entries(payload.stars).forEach(([k,v])=>starScores[k]=(starScores[k]||0)+v); setTimeout(()=>{ current++; if(current>=questions.length){ $('progressBar').style.width='100%'; showResult(); } else renderQuestion(); },240); }
+    function getAttrScore(r){ return Object.entries(r.weights).reduce((sum,[k,w])=>sum+(scores[k]||0)*w,0); }
+    function scoreResult(r,i){ const attrScore=getAttrScore(r); const directScore=(starScores[r.key]||0)*STAR_DIRECT_WEIGHT; const balanceScore=BALANCE_BIAS[r.key]||0; return {result:r,score:attrScore+directScore+balanceScore,attrScore,directScore,balanceScore,order:i}; }
+    function rankResults(){ return results.map(scoreResult).sort((a,b)=>b.score-a.score || b.directScore-a.directScore || b.attrScore-a.attrScore || a.order-b.order); }
+    function normalizeBars(result){ return Object.keys(result.weights).sort((a,b)=>result.weights[b]-result.weights[a]).slice(0,5).map((k,idx)=>{ const base=58+(scores[k]||0)*6+result.weights[k]*5; return {key:k,name:attrNames[k],value:Math.max(61,Math.min(99,Math.round(base+(4-idx)*2)))}; }); }
+    function computeMatch(result,bars){ const avg=bars.reduce((s,b)=>s+b.value,0)/Math.max(1,bars.length); const direct=starScores[result.key]||0; const match=Math.round(70+avg*.18+Math.min(10,direct*.32)+(TARGET_RATES[result.key]||10)*.12); return Math.max(86,Math.min(99,match)); }
+    function hasActiveScore(){ return Object.values(scores).some(v=>v>0)||Object.values(starScores).some(v=>v>0); }
+    function fallbackSimilarity(result,match){ const map={messi:['modric','kdb'],ronaldo:['haaland','mbappe'],mbappe:['son','haaland'],neymar:['yamal','messi'],modric:['messi','kdb'],haaland:['ronaldo','mbappe'],son:['mbappe','bellingham'],yamal:['neymar','messi'],bellingham:['son','modric'],kdb:['modric','messi']}; const rel=(map[result.key]||[]).map(k=>results.find(r=>r.key===k)).filter(Boolean); return [{result,percent:match||96},{result:rel[0]||results[0],percent:74},{result:rel[1]||results[1],percent:68}]; }
+    function buildSimilarity(ranking,result,match){ if(!hasActiveScore()) return fallbackSimilarity(result,match); const top=ranking[0].score; return ranking.slice(0,3).map((item,idx)=>{ const gap=Math.max(0,top-item.score); let percent=idx===0?match:Math.round(match-gap*.45-idx*4); percent=Math.max(idx===0?86:45,Math.min(idx===0?99:94,percent)); return {result:item.result,percent}; }); }
+    function renderSimilarities(list){ $('similarities').innerHTML=`<div class="similarity-title"><span>你的球星人格概率</span><span>Top 3</span></div>${list.map(item=>`<div class="similarity-item"><span class="similarity-name">${item.result.emoji} ${item.result.name}</span><div class="similarity-track"><i class="similarity-fill" data-w="${item.percent}"></i></div><span class="similarity-percent">${item.percent}%</span></div>`).join('')}`; setTimeout(()=>document.querySelectorAll('.similarity-fill').forEach(el=>el.style.width=el.dataset.w+'%'),120); }
+    function showResult(saved){ const ranking=saved?.ranking||rankResults(); const result=saved?.result||ranking[0].result; const bars=saved?.bars||normalizeBars(result); const match=saved?.match||computeMatch(result,bars); const similarities=saved?.similarities||buildSimilarity(ranking,result,match); lastResult={result,bars,match,similarities,scores:{...scores},starScores:{...starScores}}; try{localStorage.setItem('worldcupStarTestLast',JSON.stringify(lastResult));}catch(e){} $('lastBtn').style.display='block'; const card=$('resultCard'); card.style.setProperty('--result-a',result.colors[0]); card.style.setProperty('--result-b',result.colors[1]); $('resultEmoji').textContent=result.emoji; $('resultName').textContent=result.name; $('resultNick').textContent=result.nick; $('matchRate').textContent=match+'%'; $('resultDesc').textContent=result.desc; $('tags').innerHTML=result.tags.map(t=>`<span class="tag">${t}</span>`).join(''); $('bars').innerHTML=bars.map(b=>`<div class="bar-row"><span>${b.name}</span><div class="bar-track"><i class="bar-fill" data-w="${b.value}"></i></div><b>${b.value}</b></div>`).join(''); renderSimilarities(similarities); $('shareTitle').textContent=`测完不发？${result.name}都等你认领`; document.title = `测完不发？你的本命球星都急了⚽`;  $('shareText').textContent=`我测出来是【${result.name}】：${result.nick}，最高匹配 ${match}%。你敢来测吗？`; $('allResults').classList.remove('show'); $('toggleAllBtn').textContent='查看全部结果'; showScreen('result'); setTimeout(()=>document.querySelectorAll('.bar-fill').forEach(el=>el.style.width=el.dataset.w+'%'),80); confetti(); }
+    function renderAllResults(){ $('allResults').innerHTML=results.map(r=>`<div class="mini-result"><b>${r.emoji} ${r.name}</b><p>${r.nick}</p></div>`).join(''); }
+    function getShareUrl(result){ try{ const url=new URL(window.location.href); url.searchParams.set('r',result.key); return url.toString(); }catch(e){ return window.location.href; } }
+    function copyText(text,msg){ if(navigator.clipboard&&window.isSecureContext) return navigator.clipboard.writeText(text).then(()=>toast(msg)); const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); toast(msg); return Promise.resolve(); }
+    function shareLink(){ const result=lastResult?.result; if(!result){toast('先完成测试');return;} const url=getShareUrl(result); const text=$('shareText').textContent; const title=$('shareTitle')?.textContent || '测完不发？你的本命球星都急了'; if(navigator.share) navigator.share({title,text,url}).catch(()=>{}); else copyText(`${title}\n${text}\n${url}`,'分享链接已复制'); }
+    function toast(msg){ const t=$('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(t.timer); t.timer=setTimeout(()=>t.classList.remove('show'),1500); }
+    function confetti(){ if(matchMedia('(prefers-reduced-motion: reduce)').matches) return; const colors=['#ffd166','#43ff99','#51e8ff','#ff5d9e','#fff7c8']; for(let i=0;i<28;i++){ const el=document.createElement('i'); el.className='confetti'; el.style.left=Math.random()*100+'%'; el.style.background=colors[i%colors.length]; el.style.setProperty('--dur',780+Math.random()*900+'ms'); el.style.setProperty('--drift',-60+Math.random()*120+'px'); document.body.appendChild(el); setTimeout(()=>el.remove(),1800); } }
+
+    bindTap($('startBtn'),startQuiz); bindTap($('restartBtn'),startQuiz); bindTap($('shareBtn'),shareLink); bindTap($('toggleAllBtn'),()=>{ renderAllResults(); const box=$('allResults'); box.classList.toggle('show'); $('toggleAllBtn').textContent=box.classList.contains('show')?'收起全部结果':'查看全部结果'; }); bindTap($('lastBtn'),()=>{ try{ const saved=JSON.parse(localStorage.getItem('worldcupStarTestLast')); if(saved) showResult(saved); else toast('还没有上次结果'); }catch(e){toast('还没有上次结果');} });
+    try{ if(localStorage.getItem('worldcupStarTestLast')) $('lastBtn').style.display='block'; const k=new URLSearchParams(location.search).get('r'); if(k){ const r=results.find(x=>x.key===k); if(r) showResult({result:r}); } }catch(e){}
+  </script>
+</body>
+</html>
